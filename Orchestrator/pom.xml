@@ -1,0 +1,215 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Orchestrator</groupId>
+	<artifactId>Orchestrator</artifactId>
+	<version>1.0.0</version>
+
+	<name>javadb-derby-embedded-basic</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<jackson.annotation.version>2.9.9</jackson.annotation.version>
+		<jackson.core.version>2.9.9</jackson.core.version>
+		<jackson.datatype.version>2.9.9</jackson.datatype.version>
+		<jackson.databind.version>2.9.4</jackson.databind.version>
+		<jackson.dataformat.xml.version>2.9.0</jackson.dataformat.xml.version>
+		<commons.codec.version>1.9</commons.codec.version>
+		<commons.io.version>2.6</commons.io.version>
+		<rest.assured.version>3.0.0</rest.assured.version>
+		<java.ws.rs.version>2.0</java.ws.rs.version>
+		<hibernate.version>5.4.2.Final</hibernate.version>
+		<postgresql.version>42.2.2</postgresql.version>
+		<json.version>1.1.1</json.version>
+		<json.clerezza.version>0.4</json.clerezza.version>
+		<maven.model.version>3.0.2</maven.model.version>
+		<extentreports.version>2.41.2</extentreports.version>
+		<registration.services.version>0.12.0</registration.services.version>
+		<json.path.version>2.4.0</json.path.version>
+		<testNg.version>6.11</testNg.version>
+		<http.client.version>4.5.3</http.client.version>
+		<lombok.version>1.18.4</lombok.version>
+		<org.json.version>20180813</org.json.version>
+		<log4j.version>2.11.1</log4j.version>
+		<reg-client.automation.verson>0.9.1</reg-client.automation.verson>
+		<reg-proc.automation.version>0.9.1</reg-proc.automation.version>
+		<pre-reg.automation.version>0.9.1</pre-reg.automation.version>
+		<ida-automation.version>0.9.1</ida-automation.version>
+		<commons.collection.version>4.0</commons.collection.version>
+		<jsonWebToken.version>0.6.0</jsonWebToken.version>
+		<javax.mail.version>1.4</javax.mail.version>
+		<derby.version>10.15.2.0</derby.version>
+	</properties>
+	<dependencies>
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>${java.ws.rs.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>${json.path.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${rest.assured.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testNg.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.core.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.annotation.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.databind.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+
+
+		<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-core -->
+
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>${jackson.dataformat.xml.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>${json.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+
+
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testNg.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${javax.mail.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>10.14.2.0</version>
+		</dependency>
+
+	</dependencies>
+
+<build>
+		<pluginManagement>
+			<plugins>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>io.mosip.orchestrator.testrunner.MosipTestRunner</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

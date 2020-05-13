@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="7" ignored="0" total="11" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="HealthCheckSuite" duration-ms="35787" started-at="2020-05-13T10:42:05Z" finished-at="2020-05-13T10:42:40Z">
+    <groups>
+      <group name="actuatorTest">
+        <method signature="ActuatorTest.actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="actuatorHealthTest" class="io.mosip.actuator.healthcheck.test.ActuatorTest"/>
+      </group> <!-- actuatorTest -->
+      <group name="preReg">
+        <method signature="PreRegistrationSmoke.bookAppointment()[pri:5, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="bookAppointment" class="io.mosip.preregistration.tests.PreRegistrationSmoke"/>
+        <method signature="PreRegistrationSmoke.createApplication()[pri:2, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="createApplication" class="io.mosip.preregistration.tests.PreRegistrationSmoke"/>
+        <method signature="PreRegistrationSmoke.documentUpload()[pri:3, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="documentUpload" class="io.mosip.preregistration.tests.PreRegistrationSmoke"/>
+        <method signature="PreRegistrationSmoke.fetchCenter()[pri:4, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="fetchCenter" class="io.mosip.preregistration.tests.PreRegistrationSmoke"/>
+        <method signature="PreRegistrationSmoke.generateOtp()[pri:1, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="generateOtp" class="io.mosip.preregistration.tests.PreRegistrationSmoke"/>
+      </group> <!-- preReg -->
+    </groups>
+    <test name="HealthCheckTest" duration-ms="35787" started-at="2020-05-13T10:42:05Z" finished-at="2020-05-13T10:42:40Z">
+      <class name="io.mosip.actuator.healthcheck.test.ActuatorTest">
+        <test-method status="PASS" signature="getTestCaseName(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestContext)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="getTestCaseName" is-config="true" duration-ms="9" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(java.lang.Object,java.lang.Object)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@23d23d98]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@1fd35a92]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestCaseName -->
+        <test-method status="PASS" signature="actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="id-repository" duration-ms="1" started-at="2020-05-13T16:12:29Z" data-provider="serviceMap" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[id-repository]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{id-repository-identity-service=UP, id-repository-vid-service=UP}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- id-repository -->
+        <test-method status="PASS" signature="setResultTestName(org.testng.ITestResult)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="setResultTestName" is-config="true" duration-ms="1" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=actuatorHealthTest status=SUCCESS method=ActuatorTest.actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setResultTestName -->
+        <test-method status="PASS" signature="getTestCaseName(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestContext)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="getTestCaseName" is-config="true" duration-ms="1" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(java.lang.Object,java.lang.Object)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@40db6136]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@1fd35a92]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestCaseName -->
+        <test-method status="FAIL" signature="actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="pre-registration" duration-ms="1" started-at="2020-05-13T16:12:29Z" data-provider="serviceMap" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[pre-registration]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{pre-registration-document-service=Down, pre-registration-notification-service=UP, pre-registration-translitration-service=UP, pre-registration-batchjob-service=Down, pre-registration-login-service=UP, pre-registration-generateqrcode-service=UP, pre-registration-booking-service=Down, pre-registration-demographic-service=Down, pre-registration-ui=Down, pre-registration-datasync-service=Down}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(ActuatorTest.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.startTestRunner(MosipTestRunner.java:72)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.main(MosipTestRunner.java:35)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pre-registration -->
+        <test-method status="PASS" signature="setResultTestName(org.testng.ITestResult)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="setResultTestName" is-config="true" duration-ms="1" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=actuatorHealthTest status=FAILURE method=ActuatorTest.actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setResultTestName -->
+        <test-method status="PASS" signature="actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="registration-processor" duration-ms="0" started-at="2020-05-13T16:12:29Z" data-provider="serviceMap" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[registration-processor]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{registration-processor-packet-uploader-stage=UP, registration-processor-request-handler-service=UP, registration-processor-bio-dedupe-service=UP, registration-processor-external-integration-service=UP, registration-processor-print-service=UP, registration-processor-manual-verification-stage=UP, registration-processor-abis=UP}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registration-processor -->
+        <test-method status="PASS" signature="getTestCaseName(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestContext)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="getTestCaseName" is-config="true" duration-ms="0" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(java.lang.Object,java.lang.Object)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@6b630d4b]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@1fd35a92]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestCaseName -->
+        <test-method status="FAIL" signature="actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="kernel" duration-ms="0" started-at="2020-05-13T16:12:29Z" data-provider="serviceMap" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kernel]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{kernel-otpmanager-service=UP, kernel-tokenidgenerator-service=UP, kernel-licensekeymanager-service=UP, kernel-auth-service=UP, kernel-ridgenerator-service=UP, kernel-uingenerator-service=UP, kernel-emailnotification-service=UP, kernel-masterdata-service=UP, kernel-auditmanager-service=UP, kernel-syncdata-service=UP, kernel-applicanttype-service=UP, kernel-config-server=Down, kernel-smsnotification-service=UP, kernel-keymanager-service=UP, kernel-signature-service=UP, kernel-cryptomanager-service=UP}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(ActuatorTest.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.startTestRunner(MosipTestRunner.java:72)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.main(MosipTestRunner.java:35)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- kernel -->
+        <test-method status="PASS" signature="getTestCaseName(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestContext)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="getTestCaseName" is-config="true" duration-ms="0" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(java.lang.Object,java.lang.Object)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@70aa03c0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@1fd35a92]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestCaseName -->
+        <test-method status="PASS" signature="setResultTestName(org.testng.ITestResult)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="setResultTestName" is-config="true" duration-ms="0" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=actuatorHealthTest status=SUCCESS method=ActuatorTest.actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setResultTestName -->
+        <test-method status="PASS" signature="setResultTestName(org.testng.ITestResult)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="setResultTestName" is-config="true" duration-ms="1" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=actuatorHealthTest status=FAILURE method=ActuatorTest.actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setResultTestName -->
+        <test-method status="PASS" signature="getTestCaseName(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestContext)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="getTestCaseName" is-config="true" duration-ms="0" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(java.lang.Object,java.lang.Object)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@44da745f]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@1fd35a92]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestCaseName -->
+        <test-method status="FAIL" signature="actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="admin" duration-ms="1" started-at="2020-05-13T16:12:29Z" data-provider="serviceMap" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{admin-ui=Down, admin-service=UP}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(ActuatorTest.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.startTestRunner(MosipTestRunner.java:72)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.main(MosipTestRunner.java:35)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- admin -->
+        <test-method status="PASS" signature="setResultTestName(org.testng.ITestResult)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="setResultTestName" is-config="true" duration-ms="1" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=actuatorHealthTest status=FAILURE method=ActuatorTest.actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setResultTestName -->
+        <test-method status="PASS" signature="getTestCaseName(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestContext)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="getTestCaseName" is-config="true" duration-ms="2" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(java.lang.Object,java.lang.Object)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@2435c6ae]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@1fd35a92]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestCaseName -->
+        <test-method status="FAIL" signature="actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="authentication" duration-ms="1" started-at="2020-05-13T16:12:29Z" data-provider="serviceMap" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[authentication]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{authentication-service=UP, authentication-internal-service=UP, authentication-otp-service=UP, authentication-kyc-service=Down}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at io.mosip.actuator.healthcheck.test.ActuatorTest.actuatorHealthTest(ActuatorTest.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.startTestRunner(MosipTestRunner.java:72)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.main(MosipTestRunner.java:35)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authentication -->
+        <test-method status="PASS" signature="setResultTestName(org.testng.ITestResult)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64]" name="setResultTestName" is-config="true" duration-ms="1" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=actuatorHealthTest status=FAILURE method=ActuatorTest.actuatorHealthTest(java.lang.Object, java.lang.Object)[pri:0, instance:io.mosip.actuator.healthcheck.test.ActuatorTest@2cfb4a64] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setResultTestName -->
+      </class> <!-- io.mosip.actuator.healthcheck.test.ActuatorTest -->
+      <class name="io.mosip.preregistration.tests.PreRegistrationSmoke">
+        <test-method status="PASS" signature="generateOtp()[pri:1, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="generateOtp" duration-ms="8887" started-at="2020-05-13T16:12:29Z" finished-at="2020-05-13T16:12:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateOtp -->
+        <test-method status="FAIL" signature="createApplication()[pri:2, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="createApplication" duration-ms="1574" started-at="2020-05-13T16:12:38Z" finished-at="2020-05-13T16:12:39Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.fail(Assert.java:100)
+	at io.mosip.preregistration.tests.PreRegistrationSmoke.createApplication(PreRegistrationSmoke.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.startTestRunner(MosipTestRunner.java:72)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.main(MosipTestRunner.java:35)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createApplication -->
+        <test-method status="FAIL" signature="documentUpload()[pri:3, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="documentUpload" duration-ms="23" started-at="2020-05-13T16:12:39Z" finished-at="2020-05-13T16:12:39Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.fail(Assert.java:100)
+	at io.mosip.preregistration.tests.PreRegistrationSmoke.documentUpload(PreRegistrationSmoke.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.startTestRunner(MosipTestRunner.java:72)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.main(MosipTestRunner.java:35)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- documentUpload -->
+        <test-method status="PASS" signature="fetchCenter()[pri:4, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="fetchCenter" duration-ms="660" started-at="2020-05-13T16:12:39Z" finished-at="2020-05-13T16:12:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchCenter -->
+        <test-method status="FAIL" signature="bookAppointment()[pri:5, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="bookAppointment" duration-ms="292" started-at="2020-05-13T16:12:40Z" finished-at="2020-05-13T16:12:40Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.fail(Assert.java:100)
+	at io.mosip.preregistration.tests.PreRegistrationSmoke.bookAppointment(PreRegistrationSmoke.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.startTestRunner(MosipTestRunner.java:72)
+	at io.mosip.orchestrator.testrunner.MosipTestRunner.main(MosipTestRunner.java:35)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookAppointment -->
+        <test-method status="PASS" signature="insertIntoDb()[pri:0, instance:io.mosip.preregistration.tests.PreRegistrationSmoke@5474c6c]" name="insertIntoDb" is-config="true" duration-ms="68" started-at="2020-05-13T16:12:40Z" finished-at="2020-05-13T16:12:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertIntoDb -->
+      </class> <!-- io.mosip.preregistration.tests.PreRegistrationSmoke -->
+    </test> <!-- HealthCheckTest -->
+  </suite> <!-- HealthCheckSuite -->
+</testng-results>

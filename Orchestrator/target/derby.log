@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed May 13 16:12:05 IST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0172-0da0-8d80-00000c9765e0 
+on database directory D:\NewRig\Orchestrator\target\testRig with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+Loaded from file:/D:/NewRig/Orchestrator/target/Orchestrator-1.0.0-jar-with-dependencies.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=D:\NewRig\Orchestrator\target
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

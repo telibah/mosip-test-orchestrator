@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="HealthCheckSuite">
+	<!-- Passing Group as parmeter unsing "testType" Possible Groups are: smoke 
+		regression smokeAndRegression -->
+	<listeners>
+		<listener class-name="io.mosip.orchestrator.report.CustomTestNGReporter" />
+
+	</listeners>
+	
+	    <test name = "HealthCheckTest">
+	    		<groups>
+			<dependencies>
+				<group depends-on="actuatorTest" name="prereg"></group>
+			</dependencies>
+		</groups>
+        <classes>
+            <class name = "io.mosip.actuator.healthcheck.test.ActuatorTest"/>
+            <class name="io.mosip.preregistration.tests.PreRegistrationSmoke" />
+        </classes>
+    </test>
+</suite>
