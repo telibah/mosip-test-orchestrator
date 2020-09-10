@@ -72,5 +72,3 @@ scan_type: '-sS -A --script banner' <br/>
 
 <b>Note:</b> Set ansible to run for localhost as well. If you want to run the test from putty or remote location. Please enable "X11Forward true" for server and for putty or any console.
 <br/>
-
-Thanks for RoboZap python library
