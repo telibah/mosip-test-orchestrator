@@ -46,7 +46,7 @@ dbs_report_dir: '{{report_dir}}/dbs/'
 
 #nmap variables
 nmap_report_dir: '{{report_dir}}/nmap/'
-scan_type: '-p- -Pn -sS -A --script banner'
+scan_type: '-sS -A --script banner'
 
 #openvas variables
 openvas_report_dir: '{{report_dir}}/openvas'

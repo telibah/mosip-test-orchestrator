@@ -49,7 +49,7 @@ oscap_policy: 'ssg-centos7-ds' <br/>
 
 
 <b>For nmap</b> <br/>
-scan_type: '-p- -Pn -sS -A --script banner' <br/>
+scan_type: '-sS -A --script banner' <br/>
 
 <b>For Git Hub Repo</b><br/>
 1. You need to add your github repository URL in batch.txt file.
