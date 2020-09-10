@@ -1,0 +1,24 @@
+# This play install all the tools needed on the security console for
+# further execution of automation. Here we have split tasks and roles into seperate
+# play as tasks only run after roles if they are in the same play (for some reason)
+# and for us sequencing is important.
+
+- hosts: security-console
+  gather_facts: true 
+  tasks:
+    - {name: 'Create tmp folder', file: {name: "{{tmp_dir}}", state: directory}}
+    - {name: 'Create logs folder', file: {name: "{{logs_dir}}", state: directory}}
+    - {name: 'Create tools folder', file: {name: "{{tools_dir}}", state: directory}}
+    - {name: 'Create reporting folder', file: {name: "{{report_dir}}", state: directory}}
+
+- hosts: security-console
+  gather_facts: true
+  become_user: root
+  become: yes
+  roles:
+    - {role: base-setup/apt-packages, tags: [apt-packages]}
+    - {role: base-setup/pip-packages, tags: [pip-packages]}
+    - {role: base-setup/copy-python-libs, tags: [copy-python-libs]}
+    - {role: base-setup/zap-setup, tags: [zap-setup]}
+    - {role: base-setup/nmap-setup, tags: [nmap-setup]}
+    - {role: base-setup/openvas-setup, tags: [openvas-setup]}

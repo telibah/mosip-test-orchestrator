@@ -1,0 +1,8 @@
+- name: Copy python libraries to python lib
+  become: yes
+  copy:
+    src: "{{ item }}"
+    dest: "{{ python_lib_dir }}"
+    mode: 0774
+  with_fileglob:
+    - "{{ lib_dir }}/*.py"
