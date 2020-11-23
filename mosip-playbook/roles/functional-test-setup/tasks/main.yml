@@ -7,7 +7,7 @@
 
 - name: Check testrig directory.
   stat:
-    path: "{{ testrig_dir }}"
+    path: "{{ functional_test_dir }}"
   register: testrig_folder
 
 - debug:
@@ -21,7 +21,7 @@
 
 - name: "Deleting old build"
   file:
-    path: "{{ testrig_dir }}"
+    path: "{{ functional_test_dir }}"
     state: absent
   when: check_for_rebuild == 'yes'
 
@@ -32,16 +32,16 @@
     remote_src: yes
   when: check_for_rebuild == 'yes'
 
-- name: Bulding upgraded partner demo service for dependency
-  shell: "cd {{ testrig_dir }}/authentication-partnerdemo-service/ && mvn clean install"
-  when: check_for_rebuild == 'yes'
+#- name: Bulding upgraded partner demo service for dependency
+#  shell: "cd {{ functional_test_dir }}/authentication-partnerdemo-service/ && mvn clean install"
+#  when: check_for_rebuild == 'yes'
 
 - name: Bulding upgraded test-rig
-  shell: "cd {{ testrig_dir }}/automationtests && mvn clean install"
+  shell: "cd {{ functional_test_dir }}/automationtests && mvn clean install"
   when: check_for_rebuild == 'yes'
 
 - name: Copy jar file to test testrig directory
-  shell: "mv {{ testrig_dir }}/automationtests/target/*dependencies.jar {{ testrig_dir }}/automationtests/target/automationtests.jar"
+  shell: "mv {{ testrig_dir }}/*dependencies.jar {{ testrig_dir }}/automationtests.jar"
   when: check_for_rebuild == 'yes'
 
 - name: Sceduling upgraded Cronjob for test-rig
@@ -49,7 +49,7 @@
     name: "{{  item  }}"
     minute: "{{ (((30|int + ansible_loop.index|int) % 2|int) * 30|int)|int }}"
     hour: "{{((((ansible_loop.index|int)+((ansible_loop.index|int) % 2)) / 2|int)+(schedule_time|int - 1|int))| int }}"
-    job: "cd {{ testrig_dir }}/automationtests/target/ && java -jar -Dmodules={{ item }} -Denv.user=qa -Denv.endpoint=https://qa.mosip.net -Denv.testLevel=smokeAndRegression automationtests.jar"
+    job: "cd {{ testrig_dir }}/ && java -jar -Dmodules={{ item }} -Denv.user=qa -Denv.endpoint=https://qa.mosip.net -Denv.testLevel=smokeAndRegression automationtests.jar"
   loop: "{{ modules }}"
   loop_control:
     extended: yes
@@ -71,7 +71,7 @@
   when: testrig_folder.stat.exists == false
 
 - name: Copy jar file to test testrig directory
-  shell: "mv {{ testrig_dir }}/automationtests/target/*dependencies.jar {{ testrig_dir }}/automationtests/target/automationtests.jar"
+  shell: "mv {{ testrig_dir }}/*dependencies.jar {{ testrig_dir }}/automationtests.jar"
   when: testrig_folder.stat.exists == false
 
 - name: Sceduling upgraded Cronjob for test-rig
@@ -79,7 +79,7 @@
     name: "{{  item  }}"
     minute: "{{ (((30|int + ansible_loop.index|int) % 2|int) * 30|int)|int }}"
     hour: "{{((((ansible_loop.index|int)+((ansible_loop.index|int) % 2)) / 2|int)+(schedule_time|int - 1|int))| int }}"
-    job: "cd {{ testrig_dir }}/automationtests/target/ && java -jar -Dmodules={{ item }} -Denv.user=qa -Denv.endpoint=https://qa.mosip.net -Denv.testLevel=smokeAndRegression automationtests.jar"
+    job: "cd {{ testrig_dir }}/ && java -jar -Dmodules={{ item }} -Denv.user=qa -Denv.endpoint=https://qa.mosip.net -Denv.testLevel=smokeAndRegression automationtests.jar"
   loop: "{{ modules }}"
   loop_control:
     extended: yes
