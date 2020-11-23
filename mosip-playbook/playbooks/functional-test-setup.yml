@@ -14,7 +14,6 @@
     - name: "testrig_version"
       prompt: "Please provide git branch name"
       private: no
-      default: "1.1"
   tasks:
     - set_fact:
         testrig_version: "{{ testrig_version }}"

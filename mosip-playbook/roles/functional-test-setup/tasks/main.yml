@@ -14,73 +14,67 @@
     msg: "Specified version of testrig already exist"
   when: testrig_folder.stat.exists == true
 
-- pause:
-    prompt: "Do you want to clone and build again (yes/no)?"
-  register: check_for_rebuild
+- block:
+    - pause:
+        prompt: "Do you want to clone and build it again (yes/no)?"
+      register: check_for_rebuild
+
+    - name: Deleting old build
+      file:
+        path: "{{tools_dir}}/mosip-functional-tests-{{ testrig_version }}"
+        state: absent
+      when: check_for_rebuild.user_input | bool
+
+    - name: Downloading upgraded build version
+      unarchive:
+        src: "https://github.com/mosip/mosip-functional-tests/archive/{{ testrig_version }}.zip"
+        dest: "{{ tools_dir }}"
+        remote_src: yes
+      when: check_for_rebuild.user_input | bool
+
+    - name: Bulding upgraded automation demo service for dependency
+      shell: "cd {{ functional_test_dir }}/authentication-demo-service/ && mvn clean install"
+      when: check_for_rebuild.user_input | bool
+
+    - name: Bulding upgraded test-rig
+      shell: "cd {{ functional_test_dir }}/automationtests && mvn clean install"
+      when: check_for_rebuild.user_input | bool
+
+    - name: Copy jar file to test testrig directory
+      shell: "mv {{ testrig_dir }}/*dependencies.jar {{ testrig_dir }}/automationtests.jar"
+      when: check_for_rebuild.user_input | bool
   when: testrig_folder.stat.exists == true
 
-- name: "Deleting old build"
-  file:
-    path: "{{ functional_test_dir }}"
-    state: absent
-  when: check_for_rebuild == 'yes'
 
-- name: Downloading upgraded build version
-  unarchive:
-    src: "https://github.com/mosip/mosip-functional-tests/archive/{{ testrig_version }}.zip"
-    dest: "{{ tools_dir }}"
-    remote_src: yes
-  when: check_for_rebuild == 'yes'
+- block:
+    - name: Downloading build version
+      unarchive:
+        src: "https://github.com/mosip/mosip-functional-tests/archive/{{ testrig_version }}.zip"
+        dest: "{{ tools_dir }}"
+        remote_src: yes
 
-#- name: Bulding upgraded partner demo service for dependency
-#  shell: "cd {{ functional_test_dir }}/authentication-partnerdemo-service/ && mvn clean install"
-#  when: check_for_rebuild == 'yes'
+    - name: Bulding automation demo service for dependency
+      shell: "cd {{ functional_test_dir }}/authentication-demo-service/ && mvn clean install"
 
-- name: Bulding upgraded test-rig
-  shell: "cd {{ functional_test_dir }}/automationtests && mvn clean install"
-  when: check_for_rebuild == 'yes'
+    - name: Bulding test-rig
+      shell: "cd {{ functional_test_dir }}/automationtests && mvn clean install"
 
-- name: Copy jar file to test testrig directory
-  shell: "mv {{ testrig_dir }}/*dependencies.jar {{ testrig_dir }}/automationtests.jar"
-  when: check_for_rebuild == 'yes'
-
-- name: Sceduling upgraded Cronjob for test-rig
-  cron:
-    name: "{{  item  }}"
-    minute: "{{ (((30|int + ansible_loop.index|int) % 2|int) * 30|int)|int }}"
-    hour: "{{((((ansible_loop.index|int)+((ansible_loop.index|int) % 2)) / 2|int)+(schedule_time|int - 1|int))| int }}"
-    job: "cd {{ testrig_dir }}/ && java -jar -Dmodules={{ item }} -Denv.user=qa -Denv.endpoint=https://qa.mosip.net -Denv.testLevel=smokeAndRegression automationtests.jar"
-  loop: "{{ modules }}"
-  loop_control:
-    extended: yes
-  when: check_for_rebuild == 'yes'
-
-- name: Download new version of Functional Test
-  unarchive:
-    src: "https://github.com/mosip/mosip-functional-tests/archive/{{ testrig_version }}.zip"
-    dest: "{{ tools_dir }}"
-    remote_src: yes
+    - name: Copy jar file to test testrig directory
+      shell: "mv {{ testrig_dir }}/*dependencies.jar {{ testrig_dir }}/automationtests.jar"
   when: testrig_folder.stat.exists == false
 
-#- name: Bulding new version of partner demo service for dependency
-#  shell: "cd {{ testrig_dir }}/authentication-partnerdemo-service/ && mvn clean install"
-#  when: testrig_folder.stat.exists == false
+- pause:
+    prompt: "Do you want to setup cronjobs for testrig (yes/no)?"
+  register: check_for_cronjob
 
-- name: Bulding new version of test-rig
-  shell: "cd {{ testrig_dir }}/automationtests && mvn clean install"
-  when: testrig_folder.stat.exists == false
-
-- name: Copy jar file to test testrig directory
-  shell: "mv {{ testrig_dir }}/*dependencies.jar {{ testrig_dir }}/automationtests.jar"
-  when: testrig_folder.stat.exists == false
-
-- name: Sceduling upgraded Cronjob for test-rig
-  cron:
-    name: "{{  item  }}"
-    minute: "{{ (((30|int + ansible_loop.index|int) % 2|int) * 30|int)|int }}"
-    hour: "{{((((ansible_loop.index|int)+((ansible_loop.index|int) % 2)) / 2|int)+(schedule_time|int - 1|int))| int }}"
-    job: "cd {{ testrig_dir }}/ && java -jar -Dmodules={{ item }} -Denv.user=qa -Denv.endpoint=https://qa.mosip.net -Denv.testLevel=smokeAndRegression automationtests.jar"
-  loop: "{{ modules }}"
-  loop_control:
-    extended: yes
-  when: testrig_folder.stat.exists == false
+- block:
+    - name: Sceduling upgraded Cronjob for test-rig
+      cron:
+        name: "{{  item  }}"
+        minute: "{{ (((30|int + ansible_loop.index|int) % 2|int) * 30|int)|int }}"
+        hour: "{{((((ansible_loop.index|int)+((ansible_loop.index|int) % 2)) / 2|int)+(schedule_time|int - 1|int))| int }}"
+        job: "cd {{ testrig_dir }}/ && java -jar -Dmodules={{ item }} -Denv.user={{ envuser }} -Denv.endpoint={{ target_uri }} -Denv.testLevel={{ testlevel }} automationtests.jar"
+      loop: "{{ modules }}"
+      loop_control:
+        extended: yes
+  when: check_for_cronjob.user_input | bool

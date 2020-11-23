@@ -12,7 +12,7 @@ maven_dir: '~/.m2/'
 root_dir: '/home/mosipuser/mosip/'
 tools_dir: '{{root_dir}}/tools/'
 report_dir: '{{root_dir}}/reports/'
-
+testrig_version: '1.1'
 
 
 #Robo framework variables
