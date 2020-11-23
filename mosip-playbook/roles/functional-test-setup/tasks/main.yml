@@ -62,9 +62,9 @@
     remote_src: yes
   when: testrig_folder.stat.exists == false
 
-- name: Bulding new version of partner demo service for dependency
-  shell: "cd {{ testrig_dir }}/authentication-partnerdemo-service/ && mvn clean install"
-  when: testrig_folder.stat.exists == false
+#- name: Bulding new version of partner demo service for dependency
+#  shell: "cd {{ testrig_dir }}/authentication-partnerdemo-service/ && mvn clean install"
+#  when: testrig_folder.stat.exists == false
 
 - name: Bulding new version of test-rig
   shell: "cd {{ testrig_dir }}/automationtests && mvn clean install"
