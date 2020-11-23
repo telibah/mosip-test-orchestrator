@@ -4,28 +4,28 @@ Library  RoboZap  https://127.0.0.1:<port>  <port>
 Library  RoboFunctionalTest
 
 *** Variables ***
-${TARGET_NAME}  <target_name>  #
-${TARGET_URI}  <target_uri>  #
+${TARGET_NAME}  <target_name>  #tochange
+${TARGET_URI}  <target_uri>  #tochange
 
 #CONFIG
-${RESULTS_PATH}  <report_dir>  #
+${RESULTS_PATH}  <report_dir>  #tochange
 
 #ZAP
-${ZAP_PATH}  <zap_dir>  #
-${CONTEXT}  <context>  #
-${REPORT_TITLE}  Mosip-Test-Report-ZAP  #
-${REPORT_FORMAT}  json  #
-${ZAP_REPORT_FILE}  MOSIP.json  #
-${REPORT_AUTHOR}  <author>  #
-${SCANPOLICY}  <scan_policy>  #
+${ZAP_PATH}  <zap_dir>  #tochange
+${CONTEXT}  <context>  #tochange
+${REPORT_TITLE}  Mosip-Test-Report-ZAP  #tochange
+${REPORT_FORMAT}  json  #tochange
+${ZAP_REPORT_FILE}  MOSIP.json  #tochange
+${REPORT_AUTHOR}  <author>  #tochange
+${SCANPOLICY}  <scan_policy>  #tochange
 
 #TEST-RIG
-${PATH}  <testrig_dir>  #
-${MODULE}  <module>  #
-${ENVUSER}  <envuser>  #
-${TESTLEVEL}  <testlevel>  #
-${HOST}  <host>  #
-${PORT}  <port>  #
+${PATH}  <testrig_dir>  #tochange
+${MODULE}  <module>  #tochange
+${ENVUSER}  <envuser>  #tochange
+${TESTLEVEL}  <testlevel>  #tochange
+${HOST}  <host>  #tochange
+${PORT}  <port>  #tochange
 
 
 *** Test Cases ***
