@@ -4,7 +4,7 @@ This framework is designed for mosip e2e security and functional testing. this f
 1. Basic setup of all the required tools, packages for the framework
 2. Setup scheduled cron jobs for daily functional stability run.
 3. Build latest functional test rig for Mosip.
-4. OS hardening of your complete cluster
+4. OS hardening of complete cluster
 5. Aggressive port scanning of complete cluster
 6. Port scanning of domain
 7. Network Scanning of complete cluster
