@@ -37,25 +37,25 @@ Initialize ZAP
 
 ZAP Contextualize
     [Tags]  zap_context
-    ${contextid}=  zap define context  ${CONTEXT}  ${TARGET_URI}
-    set suite variable  ${CONTEXT_ID}  ${contextid}
+    ${contextid}=  Run Keyword and Ignore Error  zap define context  ${CONTEXT}  ${TARGET_URI}
+    Run Keyword and Ignore Error  set suite variable  ${CONTEXT_ID}  ${contextid}
     sleep  10
 
 Functional Test Start
     [Tags]  start_functional_test
-    start functional test  ${PATH}  ${MODULE}  ${ENVUSER}  ${TARGET_URI}  ${TESTLEVEL}  ${HOST}  ${PORT}
+    Run Keyword and Ignore Error  start functional test  ${PATH}  ${MODULE}  ${ENVUSER}  ${TARGET_URI}  ${TESTLEVEL}  ${HOST}  ${PORT}
     sleep  10
 
 ZAP Active Scan
     [Tags]  zap_start_ascan
-    ${scanid}=  zap start ascan  ${CONTEXT_ID}  ${TARGET_URI}  ${SCANPOLICY}
-    set suite variable  ${SCAN_ID}  ${scanid}
-    zap scan status  ${scanid}
+    ${scanid}=  Run Keyword and Ignore Error  zap start ascan  ${CONTEXT_ID}  ${TARGET_URI}  ${SCANPOLICY}
+    Run Keyword and Ignore Error  set suite variable  ${SCAN_ID}  ${scanid}
+    Run Keyword and Ignore Error  zap scan status  ${scanid}
     sleep  100
 
 ZAP Json Report
     [Tags]  zap_write_to_json_file
-    zap write to json file  ${TARGET_URI}  ${RESULTS_PATH}  ${REPORT_TITLE}
+    Run Keyword and Ignore Error  zap write to json file  ${TARGET_URI}  ${RESULTS_PATH}  ${REPORT_TITLE}
 
 #ZAP Die
 #    [Tags]  zap_kill

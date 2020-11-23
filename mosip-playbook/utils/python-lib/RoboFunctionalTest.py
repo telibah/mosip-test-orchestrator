@@ -34,7 +34,8 @@ class RoboFunctionalTest(object):
         | start functional test  | path | host | port |
         """
         try:
-            cmd = 'cd '+ path+ ' && java -jar -Dmodules='+module+' -Denv.user='+envuser+' -Denv.endpoint='+endpoint+' -Denv.testLevel='+testlevel+' -Dhttps.proxyHost='+host+' -Dhttps.proxyPort='+port+' -Dhttp.proxyHost='+host+' -Dhttp.proxyPort='+port+' automationtests.jar'
+            logger.info(path)
+            cmd = 'cd '+ path + ' && java -jar -Dmodules='+module+' -Denv.user='+envuser+' -Denv.endpoint='+endpoint+' -Denv.testLevel='+testlevel+' -Dhttps.proxyHost='+host+' -Dhttps.proxyPort='+port+' -Dhttp.proxyHost='+host+' -Dhttp.proxyPort='+port+' automationtests.jar'
             os.popen(cmd)
             time.sleep(60)
             pid = 'jcmd | grep automationtests | cut -d " " -f 1'
