@@ -39,6 +39,8 @@ cron_modules: '[ "prereg", "kernel", "admin", "regproc", "idrepository", "reside
 #modules: '["all"]'
 
 #OpenScap Variables
+scap_guide_version: '0.1.53'
+#scap_guide_url: 'wget https://github.com/ComplianceAsCode/content/releases/download/v{{scap_guide_version}}/scap-security-guide-{{scap_guide_version}}.zip'
 oscap_report_dir: '{{report_dir}}/oscap/'
 oscap_profile: 'xccdf_org.ssgproject.content_profile_pci-dss'
 oscap_policy: 'ssg-centos7-ds'
@@ -48,7 +50,7 @@ dbs_report_dir: '{{report_dir}}/dbs/'
 
 #nmap variables
 nmap_report_dir: '{{report_dir}}/nmap/'
-scan_type: '-sS -A --script banner'
+scan_type: '-sS --script banner'
 
 #openvas variables
 openvas_report_dir: '{{report_dir}}/openvas'

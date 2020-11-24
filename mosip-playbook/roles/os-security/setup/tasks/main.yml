@@ -5,3 +5,13 @@
     packages:
       - openscap-scanner
       - scap-security-guide
+
+- name: Download and Unarchive latest scap security guide
+  unarchive:
+    src: "wget https://github.com/ComplianceAsCode/content/releases/download/v{{scap_guide_version}}/scap-security-guide-{{scap_guide_version}}.zip"
+    dest: "{{ tools_dir }}"
+    mode: 0755
+    remote_src: yes
+
+- name: Move Zap to zap folder
+  command: "mv {{ tools_dir }}/scap-security-guide-{{scap_guide_version}} {{ tools_dir }}/scap-security-guide"
