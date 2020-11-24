@@ -5,3 +5,7 @@
   with_items:
     - openscap-scanner
     - scap-security-guide
+    - unzip
+
+- name: delete scap dir
+  command: "rm -fr /tmp/scap-security-guide"

@@ -4,7 +4,7 @@
     --results /tmp/oscap.xml \
     --report /tmp/oscap-report-before.html \
     --fetch-remote-resources \
-    {{ tools_dir }}/scap-security-guide/{{ oscap_policy }}.xml"
+    /tmp/scap-security-guide/{{ oscap_policy }}.xml"
   ignore_errors: yes
 
 - name: generate remediation script
@@ -12,7 +12,7 @@
     --fix-type bash \
     --profile {{ oscap_profile }} \
     --output /tmp/remediation-script.sh \
-    {{ tools_dir }}/scap-security-guide/{{ oscap_policy }}.xml"
+    /tmp/scap-security-guide/{{ oscap_policy }}.xml"
   ignore_errors: yes
 
 - name: Change file ownership, group and permissions
@@ -29,7 +29,7 @@
     --profile {{ oscap_profile }} \
     --results /tmp/oscap-remediate.xml \
     --fetch-remote-resources \
-    {{ tools_dir }}/scap-security-guide/{{ oscap_policy }}.xml"
+    /tmp/scap-security-guide/{{ oscap_policy }}.xml"
   ignore_errors: yes
 
 - name: reprt after remediation
@@ -38,5 +38,5 @@
     --results /tmp/oscap.xml \
     --report /tmp/oscap-report-after.html \
     --fetch-remote-resources \
-    {{ tools_dir }}/scap-security-guide/{{ oscap_policy }}.xml"
+    /tmp/scap-security-guide/{{ oscap_policy }}.xml"
   ignore_errors: yes
