@@ -51,16 +51,16 @@ ZAP Active Scan
     ${scanid}=  Run Keyword and Ignore Error  zap start ascan  ${CONTEXT_ID}  ${TARGET_URI}  ${SCANPOLICY}
     Run Keyword and Ignore Error  set suite variable  ${SCAN_ID}  ${scanid}
     Run Keyword and Ignore Error  zap scan status  ${scanid}
-    sleep  100
+    sleep  300
 
 ZAP Json Report
     [Tags]  zap_write_to_json_file
     Run Keyword and Ignore Error  zap write to json file  ${TARGET_URI}  ${RESULTS_PATH}  ${REPORT_TITLE}
+    sleep 120
 
-#ZAP Die
-#    [Tags]  zap_kill
-#    zap shutdown
-#    sleep  10
+ZAP Die
+    [Tags]  zap_kill
+    zap shutdown
 
 #Write ZAP Results to DB
 #    parse zap json  ${RESULTS_PATH}/${ZAP_REPORT_FILE}  ${TARGET_NAME}
