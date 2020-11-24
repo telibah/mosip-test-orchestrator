@@ -23,7 +23,8 @@ target_uri: '<Env URL>'
 context: '<Env URL>'
 author: 'Mandeep Dhiman'
 scan_policy: 'Default Policy'
-module: '<Env MODULE>'
+#module: '<Env MODULE>'
+scan_modules: '[ "prereg", "kernel", "admin", "regproc", "idrepository", "resident", "partner" ]'
 envuser: '<Env USER>'
 testlevel: 'smoke'
 host: '127.0.0.1'
@@ -34,7 +35,7 @@ functional_test_dir: '{{tools_dir}}/mosip-functional-tests-{{ testrig_version }}
 testrig_dir: '{{functional_test_dir}}/automationtests/target/'
 functional_test_report_dir: '{{report_dir}}/functional-test/'
 schedule_time: '1'
-modules: '[ "prereg", "kernel", "admin", "regproc", "idrepository", "resident", "partner" ]'
+cron_modules: '[ "prereg", "kernel", "admin", "regproc", "idrepository", "resident", "partner" ]'
 #modules: '["all"]'
 
 #OpenScap Variables

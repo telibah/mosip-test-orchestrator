@@ -22,6 +22,18 @@
     regexp: "(?<=\\$[{}]ZAP_PATH[{}]\\s\\s).*.+?(?=\\s\\s#tochange)"
     replace: "{{zap_dir}}"
 
+- name: Replace report title
+  replace:
+    path: "{{ roles_dir }}/api-security/robot-file/playbook.robot"
+    regexp: "(?<=\\$[{}]REPORT_TITLE[{}]\\s\\s).*.+?(?=\\s\\s#tochange)"
+    replace: "Mosip_{{module}}_Zap_Scanning_Report"
+
+- name: Replace report name
+  replace:
+    path: "{{ roles_dir }}/api-security/robot-file/playbook.robot"
+    regexp: "(?<=\\$[{}]ZAP_REPORT_FILE[{}]\\s\\s).*.+?(?=\\s\\s#tochange)"
+    replace: "{{module}}.json"
+
 - name: Replace context
   replace:
     path: "{{ roles_dir }}/api-security/robot-file/playbook.robot"
@@ -78,10 +90,11 @@
 
 - name: Run Api Scanning using Zap
   command: "robot {{ roles_dir }}/api-security/robot-file/playbook.robot"
-#  register: robo
+  ignore_errors: yes
+  register: robo
 
-#- debug:
-#    var: robo
-#    verbosity: 4
+- debug:
+    var: robo
+    verbosity: 4
 
 

@@ -7,7 +7,15 @@
   tasks:
     - {name: 'Create report folder', file: {name: "{{ zap_report_dir }}", state: directory}}
 
-- hosts: security-console
-  gather_facts: true
-  roles:
-    - {role: api-security, tags: [api-security]}
+    - name: running role with different modules
+      include_role:
+        name: api-security
+      vars:
+        module: "{{item}}"
+      loop: "{{ scan_modules }}"
+      loop_control:
+        extended: yes
+#- hosts: security-console
+#  gather_facts: true
+#  roles:
+#    - {role: api-security, tags: [api-security]}

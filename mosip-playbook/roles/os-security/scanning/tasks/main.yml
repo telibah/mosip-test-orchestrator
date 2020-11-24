@@ -21,6 +21,7 @@
     owner: root
     group: root
     mode: '0644'
+  ignore_errors: yes
 
 - name: online remediation using openscap
   command: "oscap xccdf eval \
