@@ -2,6 +2,7 @@ skip_strings:
   /:
     - cipher
     - cypher
+    - encrypt
 
 skip_paths:
   - .*.pdf
@@ -13,6 +14,14 @@ skip_paths:
   - .*.dll
   - .*.pf
   - .*.jar
+  - .*.JPG
+  - .*.PNG
+  - .*.png
+  - .*.xls
+  - .*.SVG
+  - .*.svg
+  - .*.iso
+  - .*.ISO
 
 no_entropy: true
 no_history: true
