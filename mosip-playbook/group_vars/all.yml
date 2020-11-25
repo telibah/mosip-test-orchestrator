@@ -54,4 +54,5 @@ nmap_report_dir: '{{report_dir}}/nmap/'
 scan_type: '-sS --script banner'
 
 #openvas variables
+openvas_repo: '45.135.106.142 dl.greenbone.net'
 openvas_report_dir: '{{report_dir}}/openvas'

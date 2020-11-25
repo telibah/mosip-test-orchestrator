@@ -12,6 +12,11 @@
     - texlive-fonts-recommended
     - libopenvas9-dev
 
+- name: Update hosts file for repo
+  lineinfile:
+    dest: /etc/hosts
+    line: "{{ openvas_repo }}"
+
 - name: Update openvas db
   command: greenbone-nvt-sync
 
