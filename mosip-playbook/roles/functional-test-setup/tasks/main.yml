@@ -32,6 +32,12 @@
         remote_src: yes
       when: check_for_rebuild.user_input | bool
 
+    - name: ansible copy file locally.
+      copy:
+        src: "{{db_file_path}}"
+        dest: {{tools_dir}}/mosip-functional-tests-{{ testrig_version }}/automationtests/src/main/resources/dbFiles/
+        delegate_to: localhost
+
     - name: Bulding upgraded automation demo service for dependency
       shell: "cd {{ functional_test_dir }}/authentication-demo-service/ && mvn clean install"
       when: check_for_rebuild.user_input | bool

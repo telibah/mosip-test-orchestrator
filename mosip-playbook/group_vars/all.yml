@@ -31,6 +31,7 @@ host: '127.0.0.1'
 port: '8090'
 
 #functional testrig variables
+db_file_path: '/home/mosipuser/dbPropsextint.properties'
 functional_test_dir: '{{tools_dir}}/mosip-functional-tests-{{ testrig_version }}'
 testrig_dir: '{{functional_test_dir}}/automationtests/target/'
 functional_test_report_dir: '{{report_dir}}/functional-test/'
